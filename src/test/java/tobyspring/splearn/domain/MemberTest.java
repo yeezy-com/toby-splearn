@@ -23,7 +23,7 @@ class MemberTest {
             }
         };
 
-        member = Member.create("yulmoo@splearn.app", "Yulmoo", "secret", passwordEncoder);
+        member = Member.create(new MemberCreateRequest("yulmoo@splearn.app", "Yulmoo", "secret"), passwordEncoder);
     }
 
     @Test
