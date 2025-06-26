@@ -52,4 +52,8 @@ public class Member {
     public void changePassword(String password, PasswordEncoder passwordEncoder) {
         this.passwordHash = passwordEncoder.encode(Objects.requireNonNull(password));
     }
+
+    public boolean isActive() {
+        return this.status == MemberStatus.ACTIVE;
+    }
 }
